@@ -67,12 +67,15 @@ session_start();
 							<div id ="form" class="form">
 							  <form onsubmit="return false;" >
 								<label for="name"></label>
-								<input placeholder="Όνομα" type="text" name="name" id="name" class="form-change" required oninvalid="this.setCustomValidity('Εισάγετε το όνομά σας πρώτα!')" oninput="this.setCustomValidity('')" />
+								<input placeholder="Name" type="text" name="name" id="name" class="form-change" required oninvalid="this.setCustomValidity('Please enter your name!')" oninput="this.setCustomValidity('')" />
 								<br>
+								
+								<label for="password"></label>
+								<input placeholder="Password" type="password" name="password" id="password" class="form-change" required oninvalid="this.setCustomValidity('Please enter your password!')" oninput="this.setCustomValidity('')" />
+								<br>
+
 								<label for="email"></label>
-								<input placeholder="Email" type="text" name="email" id="email" class="form-change" required oninvalid="this.setCustomValidity('Εισάγετε το Email σας πρώτα!')" oninput="this.setCustomValidity('')" oninput="this.setCustomValidity('')" />
-					
-								<br>
+								<input placeholder="Email" type="email" name="email" id="email" class="form-change" required oninvalid="this.setCustomValidity('Please enter your email!')" oninput="this.setCustomValidity('')" />
 								<button  style="  background-color: #d4d4d4; color: rgb(0, 0, 0); border:none;
 									padding: 15px 32px;
 									text-align: center;
@@ -80,7 +83,7 @@ session_start();
 									display: inline-block;
 									font-size: 16px;
 									border-radius: 10px;
-									" /> Αποστολή</button>
+									" /> Sign Up</button>
 							</div>
 						  </div>			
 		
@@ -98,11 +101,11 @@ session_start();
 					<div id ="form" class="form">
 					  <form onsubmit="return false;" >
 						<label for="name"></label>
-						<input placeholder="Όνομα" type="text" name="name" id="name" class="form-change" required oninvalid="this.setCustomValidity('Εισάγετε το όνομά σας πρώτα!')" oninput="this.setCustomValidity('')" />
+						<input placeholder="Name" type="text" name="name" id="name" class="form-change" required oninvalid="this.setCustomValidity('Please enter your name!')" oninput="this.setCustomValidity('')" />
 						<br>
-						<label for="email"></label>
-						<input placeholder="Email" type="text" name="email" id="email" class="form-change" required oninvalid="this.setCustomValidity('Εισάγετε το Email σας πρώτα!')" oninput="this.setCustomValidity('')" oninput="this.setCustomValidity('')" />
-			
+						
+						<label for="password"></label>
+						<input placeholder="Password" type="password" name="password" id="password" class="form-change" required oninvalid="this.setCustomValidity('Please enter your password!')" oninput="this.setCustomValidity('')" />
 						<br>
 						<button  style="  background-color: #d4d4d4; color: rgb(0, 0, 0); border:none;
 							padding: 15px 32px;
@@ -111,13 +114,13 @@ session_start();
 							display: inline-block;
 							font-size: 16px;
 							border-radius: 10px;
-							" /> Αποστολή</button>
+							" /> Log In</button>
 					</div>
 				  </div>			
 
 			</div>
 		</div>
-		<div id="Btn" class="login-btn"><button>Sign in</button></div>
+		<div id="Btn" class="login-btn"><button>Log in</button></div>
 		<div id="Btn2" class="signup-btn"><button>Sign up</button></div>
 	</div>
 	
@@ -136,6 +139,7 @@ session_start();
 			<div class="welcome-message">WELCOME TO CALCULED</div>
 				
 					<input onclick="signup()" class="btn-signup" type="button" value="Click here to sign Up!">
+					<input onclick="signin()" class="btn-login" type="button" value="Or click here to Log In!">
 				
 
 		</div>
@@ -174,6 +178,10 @@ window.onclick = function(event) {
 
 function signup(){
 	modal2.style.display = "block";
+
+}
+function signin(){
+	modal.style.display = "block";
 
 }
 
