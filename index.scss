@@ -1,0 +1,337 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+background-color: #A0CFDF;
+
+    font-family: 'Roboto', sans-serif; 
+
+}
+.header{
+    box-shadow: 1px 1px 10px black;
+    background-color: #5B91A3;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 140px;
+    
+    .player-card{
+        box-shadow: 1px 1px 10px black;
+        margin-right: 100px;
+        background-color: #5b91a3;
+        width: 503px;
+        height: 107px;
+        display:flex;
+        border-radius: 10px;
+        .avatar{
+            background-color: white;
+            border-radius: 10%;
+            margin-top: 10px;
+            margin-left: 10px;
+            box-shadow: 1px 1px 3px black;
+            padding: 4px;
+            width:120px;
+            height: 70px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .misc-container{
+            display:flex;
+            flex-flow: row wrap;
+
+            .name-log{
+                margin-top: 10px;
+                .name{
+                    word-wrap: break-word;
+                    width: 200px;
+                    height: 30px;
+                    color:white;
+                    font-weight: 400;
+                    font-size: 25px;
+                    margin-left: 20px;
+                }
+                display:flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                .login-signup{
+                    .signUp{
+                        display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 1000px;
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                .signUp-content {
+                    margin: 15% auto; /* 15% from the top and centered */
+                    margin-bottom: 500px;
+                    padding: 20px;
+                    width: 25%; /* Could be more or less, depending on screen size */
+                    height: 50%;
+                    .close2 {
+  
+                        background-color: black;
+                margin-left: 250px;
+                      width:40px;
+                      height: 40px;;
+                    color: #aaa;
+                    font-size: 28px;
+                    font-weight: bold;
+                    }
+                    
+                    .close2:hover,
+                    .close2:focus {
+                      color: black;
+                      text-decoration: none;
+                      cursor: pointer;
+                    }
+                  
+                  }
+                    }
+
+            .signIn {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 1000px;
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                .signIn-content {
+                  margin: 15% auto; /* 15% from the top and centered */
+                  margin-bottom: 500px;
+                  padding: 20px;
+                  width: 25%; /* Could be more or less, depending on screen size */
+                  height: 50%;
+                  .close {
+                      background-color: black;
+                margin-left: 250px;
+                      width:40px;
+                      height: 40px;;
+                    color: #aaa;
+                    font-size: 28px;
+                    font-weight: bold;
+                  }
+                  
+                  .close:hover,
+                  .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                  }
+                
+                }
+                
+}
+                    display:flex;
+                    flex-flow:  row wrap;
+                    button{
+                        box-shadow: 1px 1px 1px black;
+                        font-weight: bold;
+                        margin-right: 10px;
+                        
+                    }
+                    .signup-btn{
+                        button{
+                            
+                            width: 90px;
+                            height: 30px;
+                            background-color: #ffc107;
+                            color: white;
+                            border: none;
+                            border-radius: 5px;
+                            padding: 5px;
+                            font-size: 15px;
+                            cursor: pointer;
+                        }
+                        
+                    }
+                    .login-btn{
+                        margin-right: 10px;
+                        width: 70px;
+                        height: 30px;   
+                        button{
+                            width: 100%;
+                            height: 100%;
+                            background-color: #4bb46e;
+                            color: white;
+                            border: none;
+                            border-radius: 5px;
+                            padding: 5px;
+                            font-size: 15px;
+                            cursor: pointer;
+                        }
+                        
+                    }
+                }
+            }
+
+            .personal-scores{
+                display:flex;
+                flex-flow: row wrap;
+                .score{
+                box-shadow: 1px 1px 5px black;
+
+                    border-radius: 10px;
+                    margin-left: 70px;
+                    margin-right: 3px;
+                
+                    width:70px;
+                    height: 50px;
+                    background-color: white;
+                }
+
+            }
+        }
+    }
+}
+
+
+.about-contact {
+    height: 300px;
+    padding: 20px;
+    color: white;
+    background-color: #aed5e2;
+    border-radius: 7px;
+    -webkit-backdrop-filter: blur(10px) opacity(1) brightness(0.1);
+            backdrop-filter: blur(10px) opacity(1) brightness(0.1);
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  
+  .about-contact h1 {
+    font-weight: 300;
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color:black;
+  }
+  
+  .about-contact .form {
+    display: block;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  
+  .about-contact .form .name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  
+  .about-contact .form .email {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 300;
+  }
+  
+  
+  
+  .about-contact .sendButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #292626;
+    color: white;
+    -webkit-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+  }
+  
+  .about-contact .sendButton:hover {
+    background-color: #292626;
+    cursor: pointer;
+  }
+  
+
+  
+  .about-contact .form-change {
+    background-color: #292626;
+    width: 300px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  
+  .about-contact .form-change:focus {
+    padding: 7px;
+    outline: none;
+  }
+  
+  .about-contact .form-change:-webkit-autofill {
+    -webkit-text-fill-color: white;
+    font-size: 18px;
+    -webkit-transition: background-color 5000s ease-out 0.3s;
+    transition: background-color 5000s ease-out 0.3s;
+  }
+
+
+
+  .hero{
+    .hero-container{
+        display:flex;
+        align-items: center;
+        flex-flow: column wrap;
+        margin-top: 100px;
+        .welcome-message{
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 50px;
+            color: #ffffff;
+            text-shadow: 0px 3px 0px #3f6ba980 ;
+
+        }
+    }
+
+   .btn-play{
+       box-shadow: 3px 5px 0px #3f6ba980 ;
+       background-color: #6ED15E;
+       width:600px;
+       height:200px;
+       outline: none;
+         cursor: pointer;
+      border-radius: 10px;
+      color:white;
+      text-shadow: 0px 3px 0px #3f6ba980 ;
+        padding: 0;
+        border: none;
+        font-size:50px;
+        text-align: center;
+        font-weight: bold;
+       
+   }
+
+
+
+  }
