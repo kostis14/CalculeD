@@ -1,0 +1,181 @@
+<?php
+
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+
+echo $_POST['gamesPlayed'];
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="./index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CalculeD</title>
+</head>
+<body>
+	<div class="header">
+		<div class="logo"><img src="./jb.png" alt=""></div>
+		<div style="display:flex;flex-flow:column wrap;align-items: center;" class="logo-name">
+		<h1 style="font-size:60px;color:white;
+		text-shadow: 1px 1px 4px black; " >CalculeD</h1>
+		<h1 style="font-size:30px;color:white;
+		text-shadow: 1px 1px 1px black;font-weight: 300;color:rgb(149, 228, 149);" >Calculate Fast!</h1>
+		</div>
+		
+
+		<div class="player-card">
+			<div class="avatar">
+				<img src="./jb.png" alt="">
+				
+			</div>
+
+			<div class="misc-container">
+				<div class="name-log">
+					<div class="name">
+				<?php
+					if($user_data['user_name'] != "")
+					{
+						echo $user_data['user_name'];
+					}
+				?>
+
+					</div>
+				</div>
+		<div class="name-log">
+			<div class="login-signup">
+					
+		
+		<div  class="logout-btn"><a href="./logout.php">Log Out</a></div>
+	</div>
+	
+		</div>
+			
+				<div class="personal-scores">
+					<div class="score">199</div>
+					<div class="score">105</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+                    <div class="game-container">
+
+						<div class="game">
+							<div class="misc">
+							<div id='start-btn' onclick="startGame()" class="start-button"><button>Start Game</button></div>
+
+							</div>
+							<div class="calculator">
+								<h1 id="game-starting" style="display:none;color:white;"> Game is starting.. good luck!</h1>
+								<div class="output">
+									<h1 class="prakseis-output"></h1>
+<textarea  class="prakseis-input" name="" id="prakseis-input" cols="30" rows="1">342</textarea>
+								</div>
+								
+							</div>
+							<div class="scoresPlayingNow">
+								<div class="score-now">0</div>
+								<div class="calculations-in-a-row">0</div>
+								<div class="calculations-highscore">0</div>
+									
+								
+
+
+
+							</div>
+						</div>
+
+					</div>
+
+
+<script src="equations.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/nerdamer.core.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Algebra.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Calculus.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nerdamer@latest/Solve.js"></script>
+    
+<script>
+
+		
+			let counter = 0;
+			
+			input.value = input.value.toString().replace(/\s+|[a-z]+/gi,'');
+			console.log(nerdamer.solve(output.innerText,'x').symbol.elements[0].toString());
+			input.addEventListener('keypress', function (e) {
+    	if (e.key === 'Enter') {
+			e.preventDefault();
+			if(input.value.toString().replace('\\s+\g','')==nerdamer.solve(output.innerText,'x').symbol.elements[0].toString()){
+				score++;
+				console.log(score);
+				if(score < 4){
+				scoreoutput.innerHTML = +(scoreoutput.innerHTML) + 20;
+				}
+				else if(score < 8){
+
+				scoreoutput.innerHTML = +(scoreoutput.innerHTML) + 30;
+				}
+				else if(score < 12){
+
+				scoreoutput.innerHTML = +(scoreoutput.innerHTML) + 40;
+				}
+				else if(score < 20){
+
+				scoreoutput.innerHTML = +(scoreoutput.innerHTML) + 50;
+				}
+
+				
+				calcinarow.innerHTML = score;
+				output.innerText = getRandomEquation();
+				input.value=''; 
+				input.focus();
+				counter =0;
+				input.style.backgroundColor = 'white';
+				input.style.color = 'black';
+			}
+			else if(input.value.toString().replace('\\s+\g','')!=nerdamer.solve(output.innerText,'x').symbol.elements[0].toString()){
+				input.style.backgroundColor = 'red';
+				input.style.color = 'white';
+				counter++;
+
+				if(counter>=2){
+					input.style.backgroundColor = 'white';
+					input.style.color = 'black';
+					output.innerText = getRandomEquation();
+					counter=0;
+					
+				}
+				
+				calc_highscore.innerHTML = score > calc_highscore.innerHTML ? score : calc_highscore.innerHTML;
+				score=0;
+				console.log(score);
+				scoreoutput.innerHTML = +(scoreoutput.innerHTML) - 20;
+				calcinarow.innerHTML = score;
+				input.value='';
+				
+				
+			input.focus();
+			}
+		
+			}
+		});
+			
+
+			
+			
+		
+	
+	</script>
+</body>
+</html>
