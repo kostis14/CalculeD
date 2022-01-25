@@ -4,14 +4,14 @@
 }
 
 body {
-  background-color: #A0CFDF;
-  font-family: 'Roboto', sans-serif;
+  background-color: #a0cfdf;
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
   -webkit-box-shadow: 1px 1px 10px black;
           box-shadow: 1px 1px 10px black;
-  background-color: #5B91A3;
+  background-color: #5b91a3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,13 +38,11 @@ body {
 }
 
 .header .player-card .avatar {
-  background-color: white;
   border-radius: 10%;
   margin-top: 10px;
   margin-left: 10px;
   -webkit-box-shadow: 1px 1px 3px black;
           box-shadow: 1px 1px 3px black;
-  padding: 4px;
   width: 120px;
   height: 70px;
 }
@@ -79,12 +77,28 @@ body {
 
 .header .player-card .misc-container .name-log .name {
   word-wrap: break-word;
-  width: 200px;
+  width: 250px;
   height: 30px;
   color: white;
   font-weight: 400;
+  text-align: center;
   font-size: 25px;
+  text-shadow: 1px 2px 2px black;
+  border-bottom: 2px solid white;
   margin-left: 20px;
+}
+
+.header .player-card .misc-container .name-log login-signup-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header .player-card .misc-container .name-log .login-signup {
@@ -261,7 +275,7 @@ body {
   text-decoration: none;
   width: 100%;
   height: 100%;
-  background-color: #6ED15E;
+  background-color: #6ed15e;
   color: white;
   border: none;
   border-radius: 5px;
@@ -278,18 +292,51 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  width: 286px;
+  width: 400px;
+  margin-left: 10px;
 }
 
-.header .player-card .misc-container .personal-scores .score {
-  -webkit-box-shadow: 1px 1px 5px black;
-          box-shadow: 1px 1px 5px black;
-  border-radius: 10px;
-  margin-left: 70px;
-  margin-right: 3px;
-  width: 70px;
-  height: 50px;
-  background-color: white;
+.header .player-card .misc-container .personal-scores .score-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .player-card .misc-container .personal-scores .score-container h1 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.header .player-card .misc-container .personal-scores .score-container .score232 {
+  width: 100px;
+  height: 30px;
+  background-color: #aca4a4;
+  margin: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 2px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  color: white;
+  border: 2px solid white;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
+  text-shadow: 1px 1px 3px black;
 }
 
 .about-contact {
@@ -413,7 +460,7 @@ body {
 .hero .btn-play {
   -webkit-box-shadow: 3px 5px 0px #3f6ba980;
           box-shadow: 3px 5px 0px #3f6ba980;
-  background-color: #6ED15E;
+  background-color: #6ed15e;
   width: 600px;
   height: 200px;
   outline: none;
@@ -479,12 +526,12 @@ body {
 
 .game-container .game {
   background-color: #94ddff;
-  width: 1200px;
+  width: 1400px;
   -webkit-box-shadow: 0px 0px 3px black;
           box-shadow: 0px 0px 3px black;
   height: 700px;
   border-radius: 5px;
-  background-image: url(./backboard.png);
+  background-image: url("./photos/backboard.png");
   margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -492,27 +539,139 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .game-container .game .misc {
-  width: 300px;
+  width: 400px;
   height: 650px;
-  background-color: green;
-  margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin-left: 55px;
+}
+
+.game-container .game .misc .odhgies {
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 2px 3px black;
+          box-shadow: 1px 2px 3px black;
+  margin-top: 50px;
+  width: 390px;
+  margin-left: 5px;
+  height: 200px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: paleturquoise;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+.game-container .game .misc .odhgies h1 {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.game-container .game .misc .options-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.game-container .game .misc .options-btn button {
+  width: 50%;
+  height: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #a8a8a8;
+  -webkit-box-shadow: 1px 2px 2px black;
+          box-shadow: 1px 2px 2px black;
+  color: white;
+  text-shadow: 1px 2.5px 1px #4d4d4d;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.game-container .game .misc .options-btn button:hover {
+  background-color: #5cd1ff;
+}
+
+.game-container .game .misc .start-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  margin-left: 80px;
+  margin-top: 30px;
+}
+
+.game-container .game .misc .start-button button {
+  width: 50%;
+  height: 80px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #6ed15e;
+  -webkit-box-shadow: 1px 2px 2px black;
+          box-shadow: 1px 2px 2px black;
+  color: white;
+  text-shadow: 1px 2.5px 1px #4d4d4d;
+  font-size: 30px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.game-container .game .misc .start-button button:hover {
+  background-color: #5cd1ff;
 }
 
 .game-container .game .calculator {
+  margin-left: 30px;
   border-radius: 5px;
-  background-image: url("./calculator.png");
+  background-image: url("./photos/calculator.png");
   width: 450px;
   height: 650px;
 }
 
+.game-container .game .calculator .game-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-shadow: 1px 1px 3px black;
+  -webkit-box-shadow: 1px 1px 40px black;
+          box-shadow: 1px 1px 40px black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 200px;
+}
+
 .game-container .game .calculator .output {
-  margin-top: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -576,9 +735,93 @@ body {
 }
 
 .game-container .scoresPlayingNow {
-  background-color: yellow;
   width: 300px;
   height: 650px;
   margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.game-container .scoresPlayingNow .score-now {
+  width: 200px;
+  height: 60px;
+  background-color: #aca4a4;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 60px;
+  text-align: center;
+  border-radius: 2px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  color: white;
+  border: 2px solid white;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
+  text-shadow: 1px 1px 3px black;
+}
+
+.game-container .scoresPlayingNow .calculations-in-a-row {
+  width: 200px;
+  height: 60px;
+  background-color: #3fb44d;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 60px;
+  text-align: center;
+  border-radius: 2px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  color: white;
+  border: 2px solid white;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
+  text-shadow: 1px 1px 3px black;
+}
+
+.game-container .scoresPlayingNow .calculations-highscore {
+  width: 200px;
+  height: 60px;
+  background-color: #3fb44d;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 60px;
+  text-align: center;
+  border-radius: 2px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  color: white;
+  border: 2px solid white;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
+  text-shadow: 1px 1px 3px black;
 }
 /*# sourceMappingURL=index.css.map */

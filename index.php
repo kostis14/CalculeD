@@ -19,13 +19,16 @@ $user_data = check_login($con);
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="stylesheet" href="./index.css">
+	<link rel="icon" href="./photos/logocalculed.png">
+	<link rel="stylesheet" href="./style/index.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CalculeD</title>
 </head>
 <body>
 	<div class="header">
-		<div class="logo"><img src="./jb.png" alt=""></div>
+		<a href="./index.php">
+		<div class="logo"><img src="./photos/logocalculed.png" alt=""></div>
+		</a>	
 		<div style="display:flex;flex-flow:column wrap;align-items: center;" class="logo-name">
 		<h1 style="font-size:60px;color:white;
 		text-shadow: 1px 1px 4px black; " >CalculeD</h1>
@@ -36,7 +39,7 @@ $user_data = check_login($con);
 
 		<div class="player-card">
 			<div class="avatar">
-				<img src="./jb.png" alt="">
+				<img src="./photos/player-avatar.png" alt="">
 				
 			</div>
 
@@ -62,9 +65,19 @@ $user_data = check_login($con);
 		</div>
 			
 				<div class="personal-scores">
-					<div class="score">199</div>
-					<div class="score">105</div>
+				<div class="score-container">
+						<h1>HIGHSCORE</h1>
+						<div class="score232"><?php
+						echo $user_data['highScore'];
+				?></div></div>
+				<div class="score-container" style="margin-left: 5px;">
+						<h1>MOST CALCULATIONS</h1>
+						<div class="score232"><?php
+						echo $user_data['gamesPlayed'];
+				?></div></div>
+
 				</div>
+				
 			</div>
 		</div>
 	</div>

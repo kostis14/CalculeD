@@ -107,8 +107,10 @@ if(isset($_POST['submit_login']))
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="stylesheet" href="./index.css">
+	<link rel="icon" href="./photos/logocalculed.png">
+	<link rel="stylesheet" href="./style/index.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Document</title>
 </head>
 <?php
@@ -125,7 +127,7 @@ if($_SESSION['userexists']||$_SESSION['wronguserpass']){
 ?>
 
 	<div class="header">
-		<div class="logo"><img src="./jb.png" alt=""></div>
+		<div class="logo"><img src="./photos/logocalculed.png" alt=""></div>
 		<div style="display:flex;flex-flow:column wrap;align-items: center;" class="logo-name">
 		<h1 style="font-size:60px;color:white;
 		text-shadow: 1px 1px 4px black; " >CalculeD</h1>
@@ -134,15 +136,13 @@ if($_SESSION['userexists']||$_SESSION['wronguserpass']){
 		</div>
 		<div class="player-card">
 			<div class="avatar">
-				<img src="./jb.png" alt="">
+				<img src="./photos/player-avatar.png" alt="">
 			</div>
 
 			<div class="misc-container">
-				<div class="name-log">
-					<div class="name">User</div>
-				</div>
+				
 		<div class="name-log">
-			<div class="login-signup">
+			<div class="login-signup" style="width:300px;margin-left:80px;">
 					
 				<div id="signUp" class="signUp">
 					<div class="signUp-content">
